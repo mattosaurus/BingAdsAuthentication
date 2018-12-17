@@ -1,0 +1,240 @@
+﻿@using Microsoft.BingAds.V12.CustomerManagement;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model AdvertiserAccount
+
+<div class="row mt-4">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col">
+        <form asp-controller="Home" asp-action="Campaign" method="post" class="text-center">
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="BillToCustomerId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="BillToCustomerId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="CurrencyCode" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="CurrencyCode" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="AccountFinancialStatus" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="AccountFinancialStatus" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="Id" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="Id" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="Language" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="Language" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="LastModifiedByUserId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="LastModifiedByUserId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="LastModifiedTime" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="LastModifiedTime" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="Name" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="Name" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="Number" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="Number" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="ParentCustomerId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="ParentCustomerId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="PaymentMethodId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="PaymentMethodId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="PaymentMethodType" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="PaymentMethodType" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="PrimaryUserId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="PrimaryUserId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="AccountLifeCycleStatus" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="AccountLifeCycleStatus" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="TimeStamp" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="TimeStamp" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="TimeZone" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="TimeZone" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="PauseReason" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="PauseReason" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="SalesHouseCustomerId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="SalesHouseCustomerId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="BackUpPaymentInstrumentId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="BackUpPaymentInstrumentId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="BillingThresholdAmount" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="BillingThresholdAmount" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="AutoTagType" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="AutoTagType" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="SoldToPaymentInstrumentId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="SoldToPaymentInstrumentId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>

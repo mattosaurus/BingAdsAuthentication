@@ -1,0 +1,124 @@
+﻿@using BingAdsAuthentication.Models;
+
+@{
+    ViewData["Title"] = "Token";
+}
+
+@model Token
+
+<div class="row mt-4">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col">
+        <form asp-controller="Home" asp-action="Account" method="post" class="text-center needs-validation" novalidate>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="AccessToken" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <textarea asp-for="AccessToken" class="form-control" readonly rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="ExpiresIn" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="ExpiresIn" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="RefreshToken" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <textarea asp-for="RefreshToken" class="form-control" readonly rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="Scope" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="Scope" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="TokenType" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="TokenType" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="UserId" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="UserId" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <label asp-for="DeveloperToken" class="col-sm-4 col-md-4 col-lg-3 col-form-label"></label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input asp-for="DeveloperToken" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-3"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <button class="btn btn-primary" type="submit">Test Token</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+}
